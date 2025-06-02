@@ -28,7 +28,12 @@ class RoleSeeder extends Seeder
             Permission::firstOrCreate(['name'=>$permission]);
         }
 
-        $admin->givePermissionTo(Permission::all());
+        // $admin->givePermissionTo(Permission::all());
+        $admin->givePermissionTo([
+            'view dashboard',
+            'view page 1',
+            'view page 3',
+        ]);
 
         $editor->givePermissionTo([
             'view dashboard',
