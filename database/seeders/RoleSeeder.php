@@ -32,17 +32,18 @@ class RoleSeeder extends Seeder
         $admin->givePermissionTo([
             'view dashboard',
             'view page 1',
+            'view page 2',
             'view page 3',
         ]);
 
         $editor->givePermissionTo([
             'view dashboard',
             'view page 1',
-            'view page 2',
         ]);
 
         $viewer->givePermissionTo([
             'view dashboard',
+            'view page 1',
         ]);
         
     }
